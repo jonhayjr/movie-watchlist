@@ -1,1 +1,1 @@
-# movie-watchlist
+# Movie Watchlist
