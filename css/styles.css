@@ -128,6 +128,32 @@ Media Queries
         border-radius: 5px;
     }
 
+    /*Movie Container*/
+    .movie-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-col-center {
+        height: 75vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .placeholder-icon {
+        width: 70px;
+        height: 61.25px;
+    }
+
+    .placeholder-text {
+        color: #2E2E2F;
+        font-size: 1.25rem;
+    }
+
+    .movie-card {
+        
+    }
+
     #search-input,
     #search-btn {
     display: inline-block;
