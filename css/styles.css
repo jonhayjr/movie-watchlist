@@ -38,7 +38,6 @@ button {
     border: none;
 }
 
-
 /********************************
 Layout
 *******************************/
@@ -128,6 +127,7 @@ nav {
     padding-bottom: 1.5em;
     border-top: 1.5px solid #2C2C2C;
     border-bottom: 1.5px solid #2C2C2C;
+    width: 85%;
 }
 
 .movie-card:first-of-type {
@@ -147,7 +147,7 @@ nav {
 
 .card-heading,
 .card-subheading {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
 }
 
 .card-img {
@@ -215,6 +215,20 @@ nav {
 .card-body__paragraph {
     line-height: 1.75;
     color: #A5A5A5;
+}
+
+/*Watchlist*/
+.watchlist-btn {
+  width: 55%;
+  display: block;
+  text-align: center;
+  margin: 0.75em auto;
+  border: none;
+}
+
+.watchlist-btn:hover {
+    border: none;
+    border-bottom: 1px solid white;
 }
     
 /********************************
