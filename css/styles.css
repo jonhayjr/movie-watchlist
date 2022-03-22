@@ -38,6 +38,7 @@ button {
     border: none;
 }
 
+
 /********************************
 Layout
 *******************************/
@@ -146,7 +147,7 @@ nav {
 
 .card-heading,
 .card-subheading {
-    margin-bottom: 0.75em;
+    margin-bottom: 0.5em;
 }
 
 .card-img {
@@ -158,7 +159,7 @@ nav {
 .card-heading__stars-img {
     width: 15px;
     height: 15px;
-    margin-right: 0.75em;
+    margin-right: 0.35em;
 }
 
 .card-heading__stars {
@@ -176,10 +177,28 @@ nav {
     display: flex;
     align-items: center;
 }
-.card-subheading__watchlist > img {
+.card-subheading__watchlist-btn-icon {
     width: 16px;
     height: 16px;
     margin-right: 0.5em;
+}
+
+.card-subheading__watchlist-btn {
+    display: inline-block;
+    background: none;
+    color: inherit;
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: 2px solid transparent;
+}
+
+.card-subheading__watchlist-btn:hover,
+.card-subheading__watchlist-btn:focus {
+    cursor: pointer;
+    opacity: 0.75;
+    border-color: white;
 }
 
 .card-heading > p,

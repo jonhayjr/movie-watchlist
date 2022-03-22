@@ -31,7 +31,6 @@ const getMovies = (search) => {
 
             renderHTML(movieData);
         
-            
         })
 
 }
@@ -65,7 +64,7 @@ const renderHTML = arr => {
             <div class="card-subheading">
                 <p class="card-subheading__runtime">${item.Runtime}</p>
                 <p class="card-subheading__genre">${item.Genre}</p>
-                <p class="card-subheading__watchlist"><img src="./img/PlusSign.svg" alt="">Watchlist</p>
+                <button class="card-subheading__watchlist-btn"><img src="./img/PlusSign.svg" alt="">Watchlist</button>
             </div>
             <div class="card-body">
                 <p class="card-body__paragraph">${arr.Plot}</p>
