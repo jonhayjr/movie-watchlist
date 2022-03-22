@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     color: white;
     text-align: center;
@@ -16,9 +17,13 @@ body {
 }
 
 h1 {
-    margin-top: 0;
     font-size: 1.5rem;
     font-weight: 800;
+}
+
+h1, h2, p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 a {
@@ -102,6 +107,97 @@ nav {
     left: 5px;
 }
 
+/*Movie Card*/
+.movie-container {
+    margin-top: 1.5em;
+    position: relative;
+    height: 75vh;
+}
+
+.movies-placeholder {
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.movie-card {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    border-top: 1.5px solid #2C2C2C;
+    border-bottom: 1.5px solid #2C2C2C;
+}
+
+.movie-card:first-of-type {
+    border-top: none;
+}
+.movie-card:last-of-type {
+    border-bottom: none;
+}
+
+.movie-card,
+.card-heading,
+.card-subheading {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.card-heading,
+.card-subheading {
+    margin-bottom: 0.75em;
+}
+
+.card-img {
+    height: 148px;
+    width: 99px;
+    margin-right: 1em;
+}
+
+.card-heading__stars-img {
+    width: 15px;
+    height: 15px;
+    margin-right: 0.75em;
+}
+
+.card-heading__stars {
+    display: flex;
+    align-items: center;
+}
+
+.card-heading__title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-right: 0.5em;
+}
+
+.card-subheading__watchlist {
+    display: flex;
+    align-items: center;
+}
+.card-subheading__watchlist > img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5em;
+}
+
+.card-heading > p,
+.card-subheading > p,
+.card-body > p {
+    font-size: 0.75rem;
+}
+
+.card-subheading__runtime,
+.card-subheading__genre {
+    margin-right: 1em;
+}
+
+.card-body__paragraph {
+    line-height: 1.75;
+    color: #A5A5A5;
+}
+    
 /********************************
 Media Queries
 *******************************/
@@ -129,17 +225,6 @@ Media Queries
     }
 
     /*Movie Container*/
-    .movie-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .flex-col-center {
-        height: 75vh;
-        align-items: center;
-        justify-content: center;
-    }
-
     .placeholder-icon {
         width: 70px;
         height: 61.25px;
@@ -150,17 +235,13 @@ Media Queries
         font-size: 1.25rem;
     }
 
-    .movie-card {
-        
-    }
-
     #search-input,
     #search-btn {
     display: inline-block;
     }   
 
     #search-input {
-        width: 65%;
+        width: 75%;
     }
 
     #search-btn {
@@ -169,7 +250,7 @@ Media Queries
     }
 
     #search-icon {
-        left: 33px;
+        left: 20px;
     }
 
 }
