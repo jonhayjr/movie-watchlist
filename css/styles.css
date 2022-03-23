@@ -23,7 +23,10 @@ h1 {
 
 h1, h2, p {
     margin-top: 0;
-    margin-bottom: 0;
+}
+
+h2, p {
+    margin-bottom: 0em;
 }
 
 a {
@@ -93,6 +96,7 @@ nav {
 }
 
 #search-btn {
+    margin-top: 1em;
     width: 100%;
     background: #4B4B4B;
     color: white;
@@ -104,7 +108,7 @@ nav {
     height: 16px;
     position: absolute;
     top: 13px;
-    left: 5px;
+    left: 10px;
 }
 
 /*Movie Card*/
@@ -115,11 +119,22 @@ nav {
 }
 
 .movies-placeholder {
-    width: 75%;
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.placeholder-icon {
+    margin-bottom: 0.75em;
+    width: 70px;
+    height: 61.25px;
+}
+
+.placeholder-text {
+    color: #2E2E2F;
+    font-size: 1.25rem;
 }
 
 .movie-card {
@@ -127,7 +142,10 @@ nav {
     padding-bottom: 1.5em;
     border-top: 1.5px solid #2C2C2C;
     border-bottom: 1.5px solid #2C2C2C;
-    width: 85%;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
 }
 
 .movie-card:first-of-type {
@@ -142,18 +160,19 @@ nav {
 .card-subheading {
     display: flex;
     align-items: center;
-    text-align: left;
+    justify-content: center;
 }
 
 .card-heading,
 .card-subheading {
-    margin-bottom: 0.25em;
+    margin-bottom: 0.75em;
 }
 
 .card-img {
-    height: 148px;
-    width: 99px;
-    margin-right: 1em;
+    object-fit: contain;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2em;
 }
 
 .card-heading__stars-img {
@@ -168,7 +187,7 @@ nav {
 }
 
 .card-heading__title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-right: 0.5em;
 }
@@ -204,7 +223,7 @@ nav {
 .card-heading > p,
 .card-subheading > p,
 .card-body > p {
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 .card-subheading__runtime,
@@ -213,13 +232,13 @@ nav {
 }
 
 .card-body__paragraph {
-    line-height: 1.75;
+    line-height: 2;
     color: #A5A5A5;
 }
 
 /*Watchlist*/
 .watchlist-btn {
-  width: 55%;
+  width: 100%;
   display: block;
   text-align: center;
   margin: 0.75em auto;
@@ -257,20 +276,9 @@ Media Queries
         border-radius: 5px;
     }
 
-    /*Movie Container*/
-    .placeholder-icon {
-        width: 70px;
-        height: 61.25px;
-    }
-
-    .placeholder-text {
-        color: #2E2E2F;
-        font-size: 1.25rem;
-    }
-
     #search-input,
     #search-btn {
-    display: inline-block;
+        display: inline-block;
     }   
 
     #search-input {
@@ -278,12 +286,60 @@ Media Queries
     }
 
     #search-btn {
+        margin-top: 0;
         width: 25%;
         margin-left: -0.5em;
     }
 
     #search-icon {
-        left: 20px;
+        left: 15px;
     }
 
+
+    /*Movie Container*/
+    .movie-card {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .movies-placeholder {
+        width: 75%;
+    }
+
+    .card-heading__title {
+        font-size: 1.25rem;
+    }
+
+    .movie-card,
+    .card-heading,
+    .card-subheading {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+    .card-heading,
+    .card-subheading {
+    margin-bottom: 0.25em;
+    }
+
+    .card-img {
+        height: 148px;
+        width: 99px;
+        margin-right: 1em;
+        margin-bottom: 0;
+    }
+
+    .card-body__paragraph {
+        line-height: 1.5;
+    }
+
+    .card-heading > p,
+    .card-subheading > p,
+    .card-body > p {
+    font-size: 0.75rem;
+    }
+    
+    .watchlist-btn {
+        width: 55%;
+      }
 }
