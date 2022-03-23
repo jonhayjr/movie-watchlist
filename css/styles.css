@@ -314,13 +314,21 @@ Media Queries
     .movie-card,
     .card-heading,
     .card-subheading {
-    text-align: left;
-    justify-content: flex-start;
+        text-align: left;
 }
 
     .card-heading,
     .card-subheading {
-    margin-bottom: 0.25em;
+        margin-bottom: 0.25em;
+    }
+
+    .card-heading {
+        justify-content: flex-start;
+    }
+
+    .card-subheading {
+        justify-content: space-between;
+        width: 75%;
     }
 
     .card-img {
@@ -339,6 +347,12 @@ Media Queries
     .card-body > p {
     font-size: 0.75rem;
     }
+
+    .card-subheading__runtime,
+    .card-subheading__genre {
+        margin-right: 0;
+    }
+
     
     .watchlist-btn {
         width: 55%;
