@@ -1,58 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;900&display=swap" rel="stylesheet">
-    <link href="./css/styles.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
     <title>Movie Watchlist</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container">
-            <nav>
-                <h1>Find your film</h1>
-                <a href="watchlist.html">My watchlist</a>
-            </nav>
-        </div>
+      <div class="container">
+        <nav>
+          <h1>Find your film</h1>
+          <a href="watchlist.html">My watchlist</a>
+        </nav>
+      </div>
     </header>
     <main>
-        <div class="container">
-                <div class="searchbar">
-                    <img src="./img/MagnifyingGlass.svg" alt="Magnifying Glass" id="search-icon">
-                    <form id="search-form" autocomplete="off">
-                        <input type="text" id="search-input" name="search-input" placeholder="Search for a movie">
-                        <button id="search-btn" class="btn">Search</button>
-                    </form>
-                </div>
-            <div class="movie-container" id="movie-container">
-                <!-- <div class="movies-placeholder">
-                    <img src="./img/MovieFilm.svg" alt="Film" class="placeholder-icon">
-                    <p class="placeholder-text">Start Exploring</p>
-                </div>  -->
-
-                <!-- <div class="movie-card">
-                    <img src="./img/postersample.jpeg" alt="" class="card-img">
-                    <div class="movie-details">
-                        <div class="card-heading">
-                            <h2 class="card-heading__title">Blade Runner</h2>
-                            <p class="card-heading__stars"> <img src="./img/Star.svg" alt="" class="card-heading__stars-img">4.1</p>
-                        </div>
-                        <div class="card-subheading">
-                            <p class="card-subheading__runtime">116 mins</p>
-                            <p class="card-subheading__genre">Action, Drama Mystery</p>
-                            <button class="card-subheading__watchlist-btn" id="watchlist-add-btn"><img src="./img/PlusSign.svg" class="card-subheading__watchlist-btn-icon" alt="">Watchlist</button>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-body__paragraph">A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.</p>
-                        </div>
-                    </div>
-                </div> -->
-
-            </div>
+      <div class="container">
+        <div class="searchbar">
+          <img
+            src="./img/MagnifyingGlass.svg"
+            alt="Magnifying Glass"
+            id="search-icon"
+          />
+          <form id="search-form" autocomplete="off">
+            <input
+              type="text"
+              id="search-input"
+              name="search-input"
+              placeholder="Search for a movie"
+            />
+            <button id="search-btn" class="btn">Search</button>
+          </form>
         </div>
+        <div class="movie-container" id="movie-container"></div>
+      </div>
     </main>
     <script type="module" src="./js/index.js"></script>
-</body>
+  </body>
 </html>

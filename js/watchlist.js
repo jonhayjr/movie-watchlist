@@ -1,17 +1,20 @@
 //Constants
-const watchlistContainer = document.getElementById('watchlist-container');
+const watchlistContainer = document.getElementById("watchlist-container");
 
 //Get watchlistMovies from local storage
-let watchlistMovies = JSON.parse(localStorage.getItem("watchlist_movies")) ? JSON.parse(localStorage.getItem("watchlist_movies")) : [];
+let watchlistMovies = JSON.parse(localStorage.getItem("watchlist_movies"))
+  ? JSON.parse(localStorage.getItem("watchlist_movies"))
+  : [];
 
 //Functions
 
 //Function that renders watchlist HTML
-const renderWatchlistHTML = arr => {
-    let watchlistHtml = '';
-    if (arr.length > 0) {
-    watchlistHtml = arr.map(item => {
-       return `<div class="movie-card">
+const renderWatchlistHTML = (arr) => {
+  let watchlistHtml = "";
+  if (arr.length > 0) {
+    watchlistHtml = arr
+      .map((item) => {
+        return `<div class="movie-card">
         <img src="${item.Poster}" alt="" class="card-img">
         <div class="movie-details">
             <div class="card-heading">
@@ -28,37 +31,38 @@ const renderWatchlistHTML = arr => {
             </div>
         </div>
        </div>
-        `
-    }).join("")
-
-    } else {
-        watchlistHtml = `<div class="movies-placeholder movies-placeholder__watchlist">
+        `;
+      })
+      .join("");
+  } else {
+    watchlistHtml = `<div class="movies-placeholder movies-placeholder__watchlist">
         <p class="placeholder-text">Your watchlist is looking a little empty...</p>
         <a class="card-subheading__watchlist-btn watchlist-btn" href="index.html"><img src="./img/PlusSign.svg" class="card-subheading__watchlist-btn-icon" alt="">Let's add some movies</a>
-        </div> `
-    }
+        </div> `;
+  }
 
-    watchlistContainer.innerHTML = watchlistHtml;
-}
+  watchlistContainer.innerHTML = watchlistHtml;
+};
 
 //Render watchlist data on page load
 renderWatchlistHTML(watchlistMovies);
 
-
 //Event Listeners
 
-watchlistContainer.addEventListener('click', (e) => {
-    //Checks if remove button was clicked
-    if (e.target.id === 'watchlist-remove-btn') {
-        const movieTitle = e.target.getAttribute('data-title'); //Checks title from data attribute
-        const movie = watchlistMovies.find(movie => movie.Title === movieTitle); //Find item in array based on title
-        const index = watchlistMovies.findIndex(item => movie.Title === item.Title); //Get index of item in watchlistMovies array
-    
+watchlistContainer.addEventListener("click", (e) => {
+  //Checks if remove button was clicked
+  if (e.target.id === "watchlist-remove-btn") {
+    const movieTitle = e.target.getAttribute("data-title"); //Checks title from data attribute
+    const movie = watchlistMovies.find((movie) => movie.Title === movieTitle); //Find item in array based on title
+    const index = watchlistMovies.findIndex(
+      (item) => movie.Title === item.Title
+    ); //Get index of item in watchlistMovies array
+
     //Check if item exists in array
     if (index >= 0) {
-        watchlistMovies.splice(index, 1);
-        localStorage.setItem("watchlist_movies", JSON.stringify(watchlistMovies));
-        renderWatchlistHTML(watchlistMovies);
-        }
+      watchlistMovies.splice(index, 1);
+      localStorage.setItem("watchlist_movies", JSON.stringify(watchlistMovies));
+      renderWatchlistHTML(watchlistMovies);
     }
-})
+  }
+});
