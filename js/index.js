@@ -3,7 +3,7 @@ import config from "./config.js";
 //Constants
 const movieContainer = document.getElementById('movie-container');
 const searchInput = document.getElementById('search-input');
-const searchBtn = document.getElementById('search-btn');
+const searchForm = document.getElementById('search-form');
 
 //Get watchMovies and movieData from local storage
 let watchlistMovies = JSON.parse(localStorage.getItem("watchlist_movies")) ? JSON.parse(localStorage.getItem("watchlist_movies")) : [];
@@ -106,8 +106,14 @@ const renderMovieHTML = arr => {
 }
 
 //Function to handle search click
-const handleSearchClick = () => {
-    const searchValue = searchInput.value;
+const handleSearchClick = (e) => {
+
+    //Prevent default form behavior
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+
+    const searchValue = formData.get('search-input');
 
     if (searchValue) {
         getMovies(searchValue)
@@ -119,9 +125,8 @@ const handleSearchClick = () => {
 //Render movie data on page load
 renderMovieHTML(movieData);
 
-
 //Event Listeners
-searchBtn.addEventListener('click', handleSearchClick);
+searchForm.addEventListener('submit', handleSearchClick);
 
 movieContainer.addEventListener('click', (e) => {
     if (e.target.id === 'watchlist-add-btn') {
