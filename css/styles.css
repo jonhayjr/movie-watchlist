@@ -81,6 +81,7 @@ nav {
 #search-btn {
     padding: 1em 3em;
     display: block;
+    border-radius: 5px;
 }
 
 #search-input {
