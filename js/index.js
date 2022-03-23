@@ -11,7 +11,7 @@ let movieData = JSON.parse(localStorage.getItem("movies")) ? JSON.parse(localSto
 
 //Function to get movie data from api
 const getMovies = (search) => {
-    fetch(`http://www.omdbapi.com/?apikey=${config.apiKey}&type=movie&s=${search}`, {mode: 'cors'})
+    fetch(`https://www.omdbapi.com/?apikey=${config.apiKey}&type=movie&s=${search}`)
         .then(response => response.json())
         .then(async(data) => {
             //Check if API returns data.  If not, render no data html
@@ -53,7 +53,7 @@ const getMovies = (search) => {
 
 //Function to get individual movie data
 const getMovieById = (id) => {
-        return fetch(`http://www.omdbapi.com/?apikey=${config.apiKey}&type=movie&i=${id}`, {mode: 'cors'})
+        return fetch(`https://www.omdbapi.com/?apikey=${config.apiKey}&type=movie&i=${id}`)
                 .then(response => response.json())
                 .then(data => data)
        
