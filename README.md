@@ -4,4 +4,4 @@ With this app, a user can search for movie that is pulled from an api and then a
 
 I built this using HTML, CSS and JavaScript.
 
-Click [here](https://jonhayjr.com/movie-watchlist/) for a preview.
+Click [here](http://jonhayjr.com/movie-watchlist/) for a preview.
